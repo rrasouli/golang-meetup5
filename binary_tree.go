@@ -19,14 +19,13 @@ type BinarySearchTree struct {
 	lock     sync.RWMutex
 }
 
-func (tree *BinarySearchTree) readFileAndCreateArr(filePath string) string {
+func (tree *BinarySearchTree) readFile(filePath string) string {
 
 	content, err := ioutil.ReadFile(filePath)
 	if err != nil {
 		log.Fatal(err)
 	}
 
-	// return strings.Split(string(content), "")
 	return string(content)
 
 }
@@ -116,7 +115,7 @@ func printTreeNode(treeNode *TreeNode) {
 func main() {
 
 	var tree *BinarySearchTree = &BinarySearchTree{}
-	charsArray := tree.readFileAndCreateArr("charsFile.txt")
+	charsArray := tree.readFile("charsFile.txt")
 	asciiArray := []rune(charsArray)
 	for _, runeValue := range asciiArray {
 		tree.InsertElement(int(runeValue), int(runeValue))

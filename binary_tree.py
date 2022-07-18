@@ -61,9 +61,9 @@ class BinaryTree(object):
             elif node_obj.data > value:
                 node_obj = node_obj.leftChild
             else:
-                print(f"we found '{chr(value)}'")
+                print(f"Success found '{chr(value)}'")
                 return
-        print(f"Not found '{chr(value)}'")
+        print(f"Failed Not found '{chr(value)}'")
 
 
 a = BinaryTree(path="charsFile.txt")
