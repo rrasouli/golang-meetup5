@@ -66,5 +66,5 @@ class BinaryTree(object):
         print(f"Failed Not found '{chr(value)}'")
 
 
-a = BinaryTree(path="charsFile.txt")
-a.search_value(value="ד")
+tree = BinaryTree(path="charsFile.txt")
+tree.search_value(value="ד")
